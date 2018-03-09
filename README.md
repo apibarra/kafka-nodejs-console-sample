@@ -27,6 +27,7 @@ Node-rdkafka will build librdkafka automatically. You must ensure you have the d
 * [Apple Xcode command line tools](https://developer.apple.com/xcode/)
 * `openssl` via Brew
 * Export `CPPFLAGS=-I/usr/local/opt/openssl/include` and `LDFLAGS=-L/usr/local/opt/openssl/lib`
+*  validate with echo $CPPFLAGS   echo LDFLAGS
 * Open Keychain Access, export all certificates in System Roots to a single .pem file
 
 ## Prerequisites (Bluemix)
@@ -43,6 +44,9 @@ Once built, to run the sample, execute the following command:
 ```shell
 node app.js <kafka_brokers_sasl> <kafka_admin_url> <api_key> <ca_location>
 ```
+Paula Environment:
+node app.js kafka03-prod02.messagehub.services.us-south.bluemix.net:9093 https://kafka-admin-prod02.messagehub.services.us-south.bluemix.net:443 tvRS4mqxJwt0QTqKhjR2CzNMt3dwjksCrNmEvujf425B862H /Users/anapaulajimenezibarra/Documents/Certificados.pem
+Update the value: /Users/anapaulajimenezibarra/Documents/Certificados.pem
 
 To find the values for `<kafka_brokers_sasl>`, `<kafka_admin_url>` and `<api_key>`, access your Message Hub instance in Bluemix, go to the `Service Credentials` tab and select the `Credentials` you want to use.
 
